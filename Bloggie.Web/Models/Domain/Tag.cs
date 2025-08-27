@@ -1,5 +1,6 @@
 ﻿namespace Bloggie.Web.Models.Domain
 {
+    // Tag table Schema
     public class Tag
     {
         public Guid Id { get; set; }

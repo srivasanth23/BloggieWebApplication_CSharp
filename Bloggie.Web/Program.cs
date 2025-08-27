@@ -1,4 +1,5 @@
 using Bloggie.Web.Data;
+using Bloggie.Web.Repositoris;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,11 @@ builder.Services.AddControllersWithViews();
 //Dependency injection 
 builder.Services.AddDbContext<BloggieDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BloggieDbConnectionString")));
+
+// Add a injection (this means if someone calls Interface then give them the Repo methods
+builder.Services.AddScoped<ITagRepositary, TagRepo>(); 
+
+
 
 // middleware initiation
 var app = builder.Build();

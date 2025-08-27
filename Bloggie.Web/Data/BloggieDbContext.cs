@@ -9,6 +9,7 @@ namespace Bloggie.Web.Data
         {
         }
 
+        // default constructor
         protected BloggieDbContext()
         {
         }

@@ -4,6 +4,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Bloggie.Web.Models.Domain
 {
+    // BlogPost schema
     public class BlogPost
     {
         public Guid Id { get; set; }
